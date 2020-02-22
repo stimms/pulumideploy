@@ -1,0 +1,3 @@
+name: productiondebugger
+runtime: dotnet
+description: Builds an environment with a database, website and prodution debugger

@@ -1,0 +1,4 @@
+config:
+  azure:location: WestUS
+  productiondebugger:sqlPassword:
+    secure: AAABAAGELVGAIP8yMuyaP1MypVVP6/hlF33zCcvO2Eme5q+bCq1mdr3TP2G/bFaMe2/OeQ==
