@@ -53,7 +53,7 @@ class Program
                 StorageAccountName = storageAccount.Name,
                 StorageContainerName = container.Name,
                 Type = "block",
-                Content = new FileArchive("wwwroot"),
+                Content = new FileArchive(@"C:\code\ozcode\pulumiapp\pulumiapp\bin\Debug\netcoreapp3.1\publish"),
             });
 
             var codeBlobUrl = SharedAccessSignature.SignedBlobReadUrl(blob, storageAccount);
@@ -86,6 +86,7 @@ class Program
                 AppSettings =
                 {
                     { "WEBSITE_RUN_FROM_PACKAGE", codeBlobUrl },
+                    {"OzCode:Agent:Token", "76c0dff5-a7ba-415c-858f-b1bc1124a42c|73b8df28-4f14-468d-a978-918900c1736c"}
                 },
                 ConnectionStrings =
                 {

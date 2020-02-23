@@ -1,0 +1,36 @@
+Pulumi notes
+
+We're going to start with just nothing and go from there. First thing we do is install pulumi. This can be done with a quick paste of a command into a cmd window. 
+
+Now there are 5 choices for languages for pulumi: typescript, javascript, python, go and c#. Chat a little about advantages and disadvantages of each. We're going to use C# because it has really nice strong types and completion and all that good stuff. 
+
+We need .net core 3+. We're on 3.1 something which is the LTS 
+
+az account set --subscription 8c449441-bbf5-40ee-bfad-62b06adc8ec5
+pulumi config set --secret sqlPassword hYhGeWWqgbY252ZDVJsH
+
+
+76c0dff5-a7ba-415c-858f-b1bc1124a42c|21dc3d11-4056-48c5-85d3-40b7d2354f3e
+
+
+Installing OzCode agent on an Azure App Service
+Log in to the Azure Portal.
+Find your App Service -> Configuration -> Application settings -> New Application Setting
+Add a new setting, where the key is OzCode:Agent:TenantApiKey and the value is your API token.
+Go to App Service -> Extensions -> Add -> Select OzCode Production Debugger
+Click OK to accept the legal terms and OK again to start installing the extension.
+Restart your application
+Uninstalling
+Log in to Azure Portal
+Stop your App Service
+Go to your App Service -> Extensions
+Select  OzCode Production Debugger and press delete.
+Start your App Service
+Troubleshooting
+Disable Application Insights Site Extension
+
+Ensure the “Application Insights” site extension is disabled. If Application Insights is enabled then it installs a profiler that overrides OzCode’s.
+
+Using an Application Performance Monitoring tool
+
+If you are using an APM, such as New Relic, Dynatrace, DataDog, Stackify or Raygun alongside OzCode, you must set up a custom integration that will allow the two to work together seamlessly. Please email support@oz-code.com for one of our customer support agents to help set up your integration.
